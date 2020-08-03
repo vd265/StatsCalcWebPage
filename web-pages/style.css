@@ -6,7 +6,7 @@ body {
   
   #sidebar-wrapper {
     min-height: 100vh;
-    margin-left: -15rem;
+    margin-left: -22.25rem;
     padding-left: 1rem;
     padding-right: 1rem;
     -webkit-transition: margin .25s ease-out;
@@ -27,7 +27,7 @@ body {
   }
   
   #sidebar-wrapper .list-group {
-    width: 15rem;
+    width: 20rem;
     background:none;
   }
   .list-group-item{
@@ -40,12 +40,12 @@ body {
   }
   
   #wrapper.toggled #sidebar-wrapper {
-    margin-left: -6rem;
+    margin-left: 0rem;
   }
   
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     #sidebar-wrapper {
-      margin-left: 0;
+      margin-left: -22.25rem;
     }
   
     #page-content-wrapper {
@@ -54,6 +54,6 @@ body {
     }
   
     #wrapper.toggled #sidebar-wrapper {
-      margin-left: -18rem;
+      margin-left: 0rem;
     }
   }
