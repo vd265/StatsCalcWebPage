@@ -1,0 +1,19 @@
+body {
+    overflow-x: hidden;
+    padding:0;
+  }
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+
+
+.card{
+    margin-top: 0.5rem;
+}
+
+
+.list-group-item{
+  color:#fff;
+  background: none;
+  border-color: white;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-include": "^2.4.1",
+    "install": "^0.13.0",
+    "npm": "^6.14.7"
+  }
+}
