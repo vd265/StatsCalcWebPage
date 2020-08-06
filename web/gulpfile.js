@@ -5,6 +5,7 @@ const concatCss = require('gulp-concat-css');
 const include = require('gulp-include')
 var uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const clean = require('gulp-clean');
 
 const htmlFile = [
     'src/*.html',
@@ -31,6 +32,29 @@ function js(){
             .pipe(gulp.dest('build/'));
 }
 
-exports.default = gulp.series(html, css, js);
+function jquery(){
+    return gulp.src([
+        './node_modules/jquery/dist/*',
+        '!./node_modules/jquery/dist/core.js'
+      ])
+      .pipe(gulp.dest('build/vendor/jquery'))
+}
+
+function del() {
+    return gulp.src('build/*', {read: false})
+        .pipe(clean());
+}
+
+
+function watchFiles() {
+    gulp.watch('src/**/*.html', gulp.series(html));
+    gulp.watch('src/**/*.css', gulp.series(css));
+    gulp.watch('src/**/*.js', gulp.series(js));
+    return;
+}
+
+
+
+exports.default = gulp.series(del,html, css, js,jquery);
 
 
